@@ -1,0 +1,151 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "tab",
+        "command": "editor.action.formatDocument",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+r ctrl+d",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+r ctrl+r",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "editor.action.codeAction"
+    },
+    {
+        "key": "ctrl+[BracketLeft]",
+        "command": "emacs.enterMarkMode",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-emacs.enterMarkMode",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+c ctrl+c",
+        "command": "extension.changeCase.commands",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+t f",
+        "command": "go.test.cursor"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "python.sortImports"
+    },
+    // switch tabs
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditor",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditor",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+w e",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "editorFocus",
+    },
+    {
+        "key": "ctrl+w e",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorFocus",
+    },
+    // terminals
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus",
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus",
+    },
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.new",
+    },
+    {
+        "key": "cmd+d",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus",
+    },
+    // explorer
+    {
+        "key": "ctrl+n f",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus",
+    },
+    {
+        "key": "ctrl+n d",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus",
+    },
+    {
+        "key": "d d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !explorerResourceReadonly",
+    },
+    {
+        "key": "h",
+        "command": "previousCompressedFolder",
+        "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedFirstFocus && !inputFocus",
+    },
+    {
+        "key": "l",
+        "command": "nextCompressedFolder",
+        "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedLastFocus && !inputFocus",
+    },
+    {
+        "key": "y y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !explorerResourceIsRoot",
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !explorerResourceReadonly",
+    },
+]
